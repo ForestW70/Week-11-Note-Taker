@@ -11,15 +11,15 @@ if (window.location.pathname === '/notes') {
     newNoteBtn = document.querySelector('.new-note');
     noteList = document.querySelectorAll('.list-container .list-group');
 }
-
+console.log("hello")
 // Show an element
 const show = (elem) => {
-    elem.style.display = 'inline';
+    elem.classList.remove = 'hide';
 };
 
 // Hide an element
 const hide = (elem) => {
-    elem.style.display = 'none';
+    elem.classList.add = 'hide';
 };
 
 // activeNote is used to keep track of the note in the textarea
@@ -43,7 +43,7 @@ const saveNote = (note) =>
     });
 
 const deleteNote = (id) =>
-    fetch(`/api/notes/${id}`, {
+    fetch(`./api/notes/${id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
