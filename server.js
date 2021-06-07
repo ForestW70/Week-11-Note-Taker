@@ -23,6 +23,8 @@ app.get('/api/notes', (req, res) => {
 app.post('/api/notes', (req, res) => {
     const noteList = JSON.parse(fs.readFileSync(path.join(__dirname, './db/db.json')));
     let newNote = req.body;
+    
+    console.log(newNote.title);
 
     if (noteList.length > 0 && noteList[noteList.length - 1].id) {
         newNote.id = noteList[noteList.length - 1].id + 1;
@@ -35,15 +37,37 @@ app.post('/api/notes', (req, res) => {
     res.send(newNote);
 })
 
-app.delete('./api/notes/:id', (req, res) => {
-    const noteList = JSON.parse(fs.readFile(path.join(__dirname, './db/db.json')));
+app.post('/api/notes/:id', (req, res) => {
+    const noteList = JSON.parse(fs.readFileSync(path.join(__dirname, './db/db.json')));
     let noteId = Number(req.params.id);
+    let note = req.body;
 
-    for (let i = 0; i < noteList.length; i++) {
-        if (noteList[i].id === noteId){
-            noteList.splice(i, 1);
+    let noteTitle = note.title;
+    let noteText = note.text;
+
+    const update = (id, title, text, titleVal, textVal) => {
+        let currNote = noteList.find(note => {
+            return note.id == id;
+        });
+
+        if (currNote && currNote[title]) {
+            currNote[title] = titleVal;
+            currNote[text] = textVal;
         }
     }
+
+    update(noteId, "title", "text", noteTitle, noteText);
+
+    fs.writeFileSync(path.join(__dirname, './db/db.json'), JSON.stringify(noteList));
+    res.send(noteList);
+})
+
+app.delete('/api/notes/:id', (req, res) => {
+    const noteList = JSON.parse(fs.readFileSync(path.join(__dirname, './db/db.json')));
+    let noteId = Number(req.params.id);
+    
+
+    noteList.splice(noteList.findIndex(e => e.id == noteId), 1);
 
     fs.writeFileSync(path.join(__dirname, './db/db.json'), JSON.stringify(noteList));
     res.send();
