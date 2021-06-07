@@ -16,12 +16,12 @@ if (window.location.pathname === '/notes') {
 console.log("hello")
 // Show an element
 const show = (elem) => {
-    elem.classList.remove = 'hide';
+    elem.style.display = 'inline';
 };
 
 // Hide an element
 const hide = (elem) => {
-    elem.classList.add = 'hide';
+    elem.style.display = 'none';
 };
 
 // activeNote is used to keep track of the note in the textarea
@@ -42,7 +42,7 @@ const saveNote = (note) =>
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(note),
-        
+
     });
 
 const editNote = (note) =>
@@ -94,7 +94,7 @@ const handleNoteSave = async (e) => {
         await editNote(note);
         getAndRenderNotes();
         renderActiveNotes();
-        
+
         // editNote(note).then(() => {
         //    // activeNote.parentElement.setAttribute("data-note", JSON.stringify(note))
         //     // getAndRenderNotes();
@@ -169,7 +169,8 @@ const renderNoteList = async (notes) => {
                 'fa-trash-alt',
                 'float-right',
                 'text-danger',
-                'delete-note'
+                'delete-note',
+                'tweak',
             );
             delBtnEl.addEventListener('click', handleNoteDelete);
 
