@@ -14,6 +14,7 @@ if (window.location.pathname === '/notes') {
     noteList = document.querySelectorAll('.list-container .list-group');
 }
 console.log("hello")
+
 // Show an element
 const show = (elem) => {
     elem.style.display = 'inline';
@@ -45,6 +46,7 @@ const saveNote = (note) =>
 
     });
 
+// edit note route that I added to modify an existing note.
 const editNote = (note) =>
     fetch(`/api/notes/${note.id}`, {
         method: 'POST',
@@ -66,7 +68,6 @@ const renderActiveNote = () => {
     hide(saveNoteBtn);
 
     if (activeNote.id) {
-
         noteTitle.value = activeNote.title;
         noteText.value = activeNote.text;
         noteId.value = activeNote.id
@@ -77,6 +78,7 @@ const renderActiveNote = () => {
     }
 };
 
+// added logic to handle note save from an already existing note.
 const handleNoteSave = async (e) => {
     e.preventDefault();
     const note = {
@@ -95,11 +97,6 @@ const handleNoteSave = async (e) => {
         getAndRenderNotes();
         renderActiveNotes();
 
-        // editNote(note).then(() => {
-        //    // activeNote.parentElement.setAttribute("data-note", JSON.stringify(note))
-        //     // getAndRenderNotes();
-        //     // renderActiveNote();
-        // });
     }
 };
 
