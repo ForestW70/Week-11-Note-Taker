@@ -1,17 +1,29 @@
 # Forest Wilson - Homework 11 - Note Taker
-For Good.
-
+MIT - ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)(https://opensource.org/licenses/MIT) - For Good.
+<!-- Original deployment date: June 7th, 2021 -->
 
 ## Table of Contents:
+- [Tech used](#tech-used)
 - [Project description](#project-description)
 - [Usage instructions](#usage-instructions)
 - [Project installation](#project-installation)
 - [Additional comments](#additional-comments)
 - [Contribution information](#contribution-information)
 - [Questions](#questions-or-concerns)
+- [Extras](#extras)
 
 
 ### About This Project
+
+* # Tech used:
+  1. HTML
+  2. CSS
+  3. JavaScript
+  4. Node.js
+  5. Npm
+  - express.js
+  - compression.js
+
 * # Project description:
   Welcome to notetaker3456, where you can save, modify, and delete notes to your page so you can keep track of all those important things in life like 10 grocery lists youve made but didnt end up needing afterall.
 
@@ -22,21 +34,27 @@ For Good.
 
 * # Project installation
   * from repo
-    clone repo, "npm i", "npm run", enjoy.
+    1. npm i
+    2. npm start
+    3. Take some notes.
   * from heroku
-    click link, forget about all your worries, enjoy.
+    1. Go to link
+    2. Enjoy
  
 
 * # Additional comments
-  found a lot of fun solutions to my problems in this project. having front end build already was nice, but of course couldnt help modifying some things. 
+  - found a lot of fun solutions to my problems in this project. having front end build already was nice, but of course couldnt help modifying some things. 
 
-  I did notice there wasnt a feature to modify notes so I thought it would be interesting to try and get that functionallity, since this is an app i could really use.
+  - I did notice there wasnt a feature to modify notes so I thought it would be interesting to try and get that functionallity, since this is an app i could really use.
 
-  Fincally got my debug working for node as well. hip-hip-hooray.
+  - Fincally got my debug working for node as well. hip-hip-hooray.
+
+  - Big title. Big title.
 
 
 #### Contribution information 
-- @Forestw70
+
+- If you would like to contribute to this project, please follow best practices and message me at one of the provided contacts bellow if you want to push!
 
 
 ###### Questions or concerns? 
@@ -46,11 +64,12 @@ For Good.
 
 
 # Extras
+
 * Screenshots:
-  ![App page desktop](./assets/images/desktop-1.png)
-  ![App desktop 2](./assets/images/desktop-2.png)
-  ![App page phone](./assets/images/mobile-1.png)
+  - ![App page desktop](./assets/images/desktop-1.png)
+  - ![App desktop 2](./assets/images/desktop-2.png)
+  - ![App page phone](./assets/images/mobile-1.png)
 
 * Links:
-  [Repo page](https://github.com/ForestW70/hw11notetaker)
-  [Live site](https://notetaker3456.herokuapp.com/notes)
+  - [Repo page](https://github.com/ForestW70/hw11notetaker)
+  - [Live site](https://notetaker3456.herokuapp.com/notes)

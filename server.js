@@ -7,6 +7,9 @@ app.use(express.static(path.join(__dirname, './public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+const compression = require('compression')
+app.use(compression())
+
 
 // GET routes
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, './public/index.html')))
