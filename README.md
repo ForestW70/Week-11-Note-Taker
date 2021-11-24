@@ -71,5 +71,5 @@ MIT - ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)(https
   - ![App page phone](./assets/images/mobile-1.png)
 
 * Links:
-  - [Repo page](https://github.com/ForestW70/hw11notetaker)
+  - [Repo page](https://github.com/ForestW70/Week-11-Note-Taker)
   - [Live site](https://notetaker3456.herokuapp.com/notes)
